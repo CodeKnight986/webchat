@@ -5,7 +5,6 @@
 	"main": "index.js",
 	"dependencies": {
 		"socket.io": "latest",
-		"jade": "latest",
 		"express-handlebars": "3.0.0",
 	    "express-session": "1.13.0",
 	    "passport": "0.3.2",
