@@ -1,0 +1,16 @@
+{
+	"name": "RealTimeWebChat",
+	"version": "0.0.0",
+	"description": "real time web chat using node.js power :D",
+	"main": "index.js",
+	"dependencies": {
+		"socket.io": "latest",
+		"jade": "latest",
+		"express-handlebars": "3.0.0",
+	    "express-session": "1.13.0",
+	    "passport": "0.3.2",
+	    "passport-local": "1.0.0",
+	    "html-entities": "1.2.0"
+	},
+	"author": "ray - codeknight"
+}

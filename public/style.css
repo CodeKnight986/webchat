@@ -1,0 +1,14 @@
+
+#content {
+	border: solid 2px #ccc;
+    padding: 5px;
+    height: 200px;
+    overflow: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#content > p {
+	margin: 0 0 5px;
+}
