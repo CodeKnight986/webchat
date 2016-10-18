@@ -3,6 +3,10 @@
 	"version": "0.0.0",
 	"description": "real time web chat using node.js power :D",
 	"main": "index.js",
+	"engines": {
+    	"node": "4.6.0",
+    	"npm": "2.15.9"
+    },
 	"scripts": {
     	"test": "echo \"Error: no test specified\" && exit 1",
     	"start": "node index.js"
