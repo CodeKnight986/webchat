@@ -1,5 +1,4 @@
 
-
 function init(config) {
 	
 	const app = require('./web')(config)
