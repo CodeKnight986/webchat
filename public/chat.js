@@ -31,7 +31,7 @@ function showError(title, message) {
 
 $(document).ready(function(){
 
-	socket = io.connect('http://localhost:3000');
+	socket = io.connect('/');
 
 	socket.on('message', function(data){
 		if(data.m) {
