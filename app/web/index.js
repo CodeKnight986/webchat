@@ -7,7 +7,7 @@ const exphbs = require('express-handlebars')
 
 const app = express()
 
-function init(config) {
+function intApp(config) {
 	
 	app.engine('.tpl', exphbs({
 		defaultLayout: 'layout',
@@ -34,4 +34,6 @@ function init(config) {
 
 
 
-module.exports = init
+module.exports = {
+	init: intApp
+}
