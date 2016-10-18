@@ -5,8 +5,8 @@
 
     <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="{{base_url}}/chat.js" type="text/javascript"></script>
-    <script src="{{base_url}}/socket.io/socket.io.js" type="text/javascript"></script>
+    <script src="../chat.js" type="text/javascript"></script>
+    <script src="../socket.io/socket.io.js" type="text/javascript"></script>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/style.css" rel="stylesheet" type="text/css">
