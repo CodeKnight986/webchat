@@ -9,8 +9,6 @@ function initSocket(app, port) {
 		if (err) { throw err }
 		console.log(`Server is listening on ${port} port ...`)
 	})
-	console.log(webio)
-	
 	const io = socketio.listen(webio)
 
 	io.sockets.on('connection', (socket)=>{
