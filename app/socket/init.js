@@ -1,7 +1,7 @@
 const socketio = require('socket.io')
 
-var Entities = require('html-entities').AllHtmlEntities;
-var entities = new Entities();
+const Entities = require('html-entities').AllHtmlEntities;
+const entities = new Entities();
 
 const io = null;
 
