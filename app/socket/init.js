@@ -11,7 +11,7 @@ function initSocket(app, port) {
 	})
 	console.log(webio)
 	
-	const io = socketio.listen()
+	const io = socketio.listen(webio)
 
 	io.sockets.on('connection', (socket)=>{
 		socket.emit('message', {m: 'Welcome to chat!'})
