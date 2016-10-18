@@ -1,9 +1,12 @@
-const app = require('./web')
 
-function init(port) {
+
+function init(config) {
+	
+	const app = require('./web')(config)
+
 	return {
 		app: app,
-		io: require('./socket').init(app, port)
+		io: require('./socket').init(app, config.port)
 	}
 }
 

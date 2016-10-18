@@ -7,22 +7,31 @@ const exphbs = require('express-handlebars')
 
 const app = express()
 
-app.engine('.tpl', exphbs({
-	defaultLayout: 'layout',
-	extname: '.tpl',
-	layoutsDir: path.join(__dirname),
-	partialsDir: path.join(__dirname)
-}))
-app.set('view engine', '.tpl')
-app.set('views', path.join(__dirname))
+function init(config) {
+	
+	app.engine('.tpl', exphbs({
+		defaultLayout: 'layout',
+		extname: '.tpl',
+		layoutsDir: path.join(__dirname),
+		partialsDir: path.join(__dirname),
+		helpers: {
+	        base_url: function () { return config.url; }
+	    }
+	}))
+	app.set('view engine', '.tpl')
+	app.set('views', path.join(__dirname))
 
 
-app.use(express.static(path.join(__dirname, '../..', 'public')))
-console.log(path.join(__dirname, '../..', 'public'))
+	app.use(express.static(path.join(__dirname, '../..', 'public')))
+	app.get("/", function(req, res) {
+		// res.send("It works!");
+		res.render('main')
+	})
 
-app.get("/", function(req, res) {
-	// res.send("It works!");
-	res.render('main')
-})
+	return app
 
-module.exports = app
+}
+
+
+
+module.exports = init

@@ -1,5 +1,5 @@
 
-const port = process.env.PORT || 3000
-const app = require('./app')(port)
+const config = require('./config')
+const app = require('./app')(config.env)
 
 // console.log(app);
