@@ -3,15 +3,15 @@ const socketio = require('socket.io')
 const Entities = require('html-entities').AllHtmlEntities;
 const entities = new Entities();
 
-const io = null;
-
-
 function initSocket(app, port) {
 
-	const io = socketio.listen(app.listen(port, function(err){
+	const webio = app.listen(port, function(err){
 		if (err) { throw err }
 		console.log(`Server is listening on ${port} port ...`)
-	}))
+	})
+	console.log(webio)
+	
+	const io = socketio.listen()
 
 	io.sockets.on('connection', (socket)=>{
 		socket.emit('message', {m: 'Welcome to chat!'})
